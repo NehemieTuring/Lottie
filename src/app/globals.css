@@ -33,7 +33,8 @@ body {
 .intro-section {
   flex-direction: column;
   text-align: center;
-  background: radial-gradient(circle at 50% 50%, #f8fafc 0%, #ffffff 100%);
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)), url('/bg-hero.png') center/cover no-repeat;
+  color: #ffffff;
 }
 
 .presentation-section {
@@ -87,14 +88,14 @@ body {
   font-size: 4.5rem;
   font-weight: 800;
   margin-bottom: 1.5rem;
-  background: linear-gradient(to right, #3b82f6, #8b5cf6);
+  background: linear-gradient(to right, #60a5fa, #a78bfa);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.intro-subtitle {
+.intro-section .intro-subtitle {
   font-size: 1.5rem;
-  color: #64748b;
+  color: #e2e8f0;
   max-width: 600px;
   line-height: 1.5;
 }
@@ -105,7 +106,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   animation: bounce 2s infinite;
-  color: #94a3b8;
+  color: #ffffff;
   font-size: 2.5rem;
 }
 
@@ -120,6 +121,40 @@ body {
     transform: translateY(-10px) translateX(-50%);
   }
 }
+
+/* Navbar */
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem 5%;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 50;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar-logo {
+  border-radius: 50%;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.navbar-name {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
 
 @media (max-width: 900px) {
   .presentation-section {

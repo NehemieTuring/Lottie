@@ -20,5 +20,15 @@ export default function LottiePlayer({ url }: { url: string }) {
     );
   }
 
+  // Check if it's a valid lottie file
+  if (!animationData.layers && !animationData.v) {
+    return (
+      <div style={{ height: '300px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', color: '#ef4444', backgroundColor: '#fee2e2', borderRadius: '1rem', padding: '1rem', textAlign: 'center' }}>
+        <strong>Erreur</strong>
+        <small style={{ color: '#991b1b', marginTop: '0.5rem' }}>Ce fichier JSON ne semble pas être une animation Lottie valide.</small>
+      </div>
+    );
+  }
+
   return <Lottie animationData={animationData} loop={true} />;
 }
