@@ -77,7 +77,7 @@ export default function Home() {
       </section>
 
       {/* Animation 3 */}
-      <section className="section-container presentation-section">
+      <section className="section-container presentation-section" style={{ backgroundColor: '#fcfbfc' }}>
         <motion.div 
           className="text-content"
           initial={{ opacity: 0, x: -50 }}
